@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - COOPERATIVE R2C1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Connexion Admin</h2>
+  <input type="password" id="password" placeholder="Mot de passe admin">
+  <button onclick="checkPassword()">Se connecter</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<div id="adminPanel" style="display:none;">
+  <h2>Rapport des inscriptions</h2>
+  <table id="inscriptionTable">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Pays</th>
+        <th>Téléphone</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+const mdpCorrect = "admin123";
+
+function checkPassword() {
+    const mdp = document.getElementById("password").value;
+    if (mdp === mdpCorrect) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+        chargerDonnees();
+    } else {
+        document.getElementById("error").innerText = "Mot de passe incorrect.";
+    }
+}
+
+function chargerDonnees() {
+    fetch('admin-data.json')
+        .then(res => res.json())
+        .then(data => {
+            const tbody = document.querySelector("#inscriptionTable tbody");
+            data.forEach(inscrit => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${inscrit.nom}</td>
+                    <td>${inscrit.prenom}</td>
+                    <td>${inscrit.email}</td>
+                    <td>${inscrit.pays}</td>
+                    <td>${inscrit.telephone}</td>
+                    <td>${inscrit.date}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        });
+}
+</script>
+</body>
+</html>
