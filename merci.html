@@ -2,77 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription - COOPERATIVE R2C1</title>
+  <title>Merci pour votre inscription</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
-    header, footer { background-color: #003366; color: white; padding: 20px; text-align: center; }
-    main { padding: 20px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    form { margin-top: 20px; }
-    fieldset { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
-    legend { font-weight: bold; }
-    label { display: block; margin-top: 10px; }
-    input[type="text"], input[type="email"], input[type="date"], input[type="tel"] {
-      width: 100%; padding: 8px; box-sizing: border-box;
+    body { font-family: Arial, sans-serif; text-align: center; padding: 100px; background-color: #f0f8ff; }
+    h1 { color: #003366; }
+    a {
+      display: inline-block; margin-top: 30px;
+      color: white; background-color: #003366;
+      padding: 10px 20px; border-radius: 5px; text-decoration: none;
     }
-    input[type="radio"] { margin-right: 5px; }
-    button { background-color: #003366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #0055aa; }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Inscription à la COOPERATIVE R2C1</h1>
-</header>
-
-<main>
-  <h2>Formulaire d'inscription</h2>
-  <p>Remplissez ce formulaire pour devenir membre de notre coopérative.</p>
-
-  <form action="https://formspree.io/f/mzzgwonw" method="POST">
-    <!-- Champs cachés pour Formspree -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nouvelle inscription à la COOPERATIVE R2C1">
-    <input type="hidden" name="_next" value="merci.html">
-
-    <fieldset>
-      <legend>Informations personnelles</legend>
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required>
-
-      <label for="prenom">Prénom :</label>
-      <input type="text" id="prenom" name="prenom" required>
-
-      <label for="date_naissance">Date de naissance :</label>
-      <input type="date" id="date_naissance" name="date_naissance" required>
-
-      <label for="email">E-mail :</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="pays">Pays :</label>
-      <input type="text" id="pays" name="pays" required>
-
-      <label for="telephone">Téléphone :</label>
-      <input type="tel" id="telephone" name="telephone" placeholder="+509 1234 5678" required>
-    </fieldset>
-
-    <fieldset>
-      <legend>Méthode de paiement</legend>
-      <label><input type="radio" name="methode_paiement" value="natcash" required> Natcash</label>
-      <label><input type="radio" name="methode_paiement" value="moncash"> Moncash</label>
-      <label><input type="radio" name="methode_paiement" value="paypal"> PayPal</label>
-      <label><input type="radio" name="methode_paiement" value="carte"> Carte bancaire</label>
-      <label><input type="radio" name="methode_paiement" value="cash"> Cash</label>
-    </fieldset>
-
-    <button type="submit">S'inscrire et Payer</button>
-  </form>
-</main>
-
-<footer>
-  <p>&copy; 2025 COOPERATIVE R2C1 - Tous droits réservés</p>
-</footer>
-
+  <h1>🎉 Merci pour votre inscription !</h1>
+  <p>Nous avons bien reçu vos informations.</p>
+  <a href="index.html">Retour à l'accueil</a>
 </body>
 </html>
