@@ -1,4 +1,4 @@
-add it on it: Je veux add sheet comme bas de donne pour les inscrits et payments: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,70 +37,69 @@ add it on it: Je veux add sheet comme bas de donne pour les inscrits et payments
     <h2>Become a Member</h2>
     <p>Fill out the form below to join and participate in our rotation program.</p>
 
-    <form action="https://formspree.io/f/mzzgwonw" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Registration to COOPERATIVE R2C1">
-      <input type="hidden" name="_next" value="https://d2b1.co/thank-you.html">
+   <form action="https://script.google.com/macros/s/AKfycbyUwIVZPOT6lA8z0ahuioJtwr4HlCRdT6QcGlXtOfYiMBdtqeQ6Jq7de0Pcrbphr0Jt/exec" method="POST">
+  <input type="hidden" name="_next" value="https://d2b1.co/thank-you.html">
 
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required><br><br>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" required><br><br>
 
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required><br><br>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" required><br><br>
 
-        <label for="birth_date">Date of Birth:</label>
-        <input type="date" id="birth_date" name="birth_date" required><br><br>
+    <label for="birth_date">Date of Birth:</label>
+    <input type="date" id="birth_date" name="birth_date" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
 
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country" required><br><br>
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required><br><br>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="e.g. +509 3456 7890" required><br><br>
-      </fieldset>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="e.g. +509 3456 7890" required><br><br>
+  </fieldset>
 
-      <fieldset>
-        <legend>Payment Method</legend>
-        <p>Select your preferred payment method:</p>
+  <fieldset>
+    <legend>Payment Method</legend>
+    <p>Select your preferred payment method:</p>
 
-        <div>
-          <input type="radio" id="natcash" name="methode_paiement" value="natcash" required>
-          <label for="natcash">Natcash</label>
-        </div>
-        <div>
-          <input type="radio" id="moncash" name="methode_paiement" value="moncash">
-          <label for="moncash">Moncash</label>
-        </div>
-        <div>
-          <input type="radio" id="paypal" name="methode_paiement" value="paypal">
-          <label for="paypal">PayPal</label>
-        </div>
-        <div>
-          <input type="radio" id="carte" name="methode_paiement" value="carte">
-          <label for="carte">Credit/Debit Card</label>
-          <div id="card-details" style="display:none; margin-top: 10px; padding-left: 20px;">
-            <label for="card_number">Card Number:</label>
-            <input type="text" id="card_number" name="card_number" placeholder="XXXX XXXX XXXX XXXX"><br><br>
-            <label for="card_expiry">Expiry Date:</label>
-            <input type="text" id="card_expiry" name="card_expiry" placeholder="MM/YY"><br><br>
-            <label for="card_cvc">CVC/CVV:</label>
-            <input type="text" id="card_cvc" name="card_cvc" placeholder="XXX"><br><br>
-            <label for="card_name">Name on Card:</label>
-            <input type="text" id="card_name" name="card_name"><br><br>
-          </div>
-        </div>
-        <div>
-          <input type="radio" id="cash" name="methode_paiement" value="cash">
-          <label for="cash">Cash (manual payment)</label>
-        </div>
-      </fieldset>
+    <div>
+      <input type="radio" id="natcash" name="methode_paiement" value="natcash" required>
+      <label for="natcash">Natcash</label>
+    </div>
+    <div>
+      <input type="radio" id="moncash" name="methode_paiement" value="moncash">
+      <label for="moncash">Moncash</label>
+    </div>
+    <div>
+      <input type="radio" id="paypal" name="methode_paiement" value="paypal">
+      <label for="paypal">PayPal</label>
+    </div>
+    <div>
+      <input type="radio" id="carte" name="methode_paiement" value="carte">
+      <label for="carte">Credit/Debit Card</label>
+      <div id="card-details" style="display:none; margin-top: 10px; padding-left: 20px;">
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" placeholder="XXXX XXXX XXXX XXXX"><br><br>
+        <label for="card_expiry">Expiry Date:</label>
+        <input type="text" id="card_expiry" name="card_expiry" placeholder="MM/YY"><br><br>
+        <label for="card_cvc">CVC/CVV:</label>
+        <input type="text" id="card_cvc" name="card_cvc" placeholder="XXX"><br><br>
+        <label for="card_name">Name on Card:</label>
+        <input type="text" id="card_name" name="card_name"><br><br>
+      </div>
+    </div>
+    <div>
+      <input type="radio" id="cash" name="methode_paiement" value="cash">
+      <label for="cash">Cash (manual payment)</label>
+    </div>
+  </fieldset>
 
-      <button type="submit">Register and Pay</button>
-    </form>
+  <button type="submit">Register and Pay</button>
+</form>
+
   </section>
 
   <hr>
