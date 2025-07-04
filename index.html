@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devenir Membre & Calcul de Rotation - COOPERATIVE R2C1</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, footer { background-color: #003366; color: white; padding: 20px; text-align: center; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; padding: 0; }
+        main { padding: 20px; }
+        form { margin-top: 15px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    </style>
 </head>
 <body>
 
@@ -23,7 +29,12 @@
         <h2>Devenir Membre</h2>
         <p>Remplissez le formulaire ci-dessous pour devenir membre et participer à nos rotations.</p>
 
-        <form action="/form-handler/register.php" method="POST">
+        <form action="https://formspree.io/f/mzzgwonw" method="POST">
+            <!-- Champs cachés Formspree -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nouvelle inscription à COOPERATIVE R2C1">
+            <input type="hidden" name="_next" value="https://d2b1.co/merci.html">
+
             <fieldset>
                 <legend>Informations Personnelles</legend>
                 <label for="nom">Nom :</label>
@@ -93,13 +104,12 @@
 
         <form>
             <label for="nombre_personnes">Nombre de personnes en rotation (10 ou plus) :</label>
-            <input type="number" id="nombre_personnes" name="nombre_personnes" min="10" step="1" required><br><br>
+            <input type="number" id="nombre_personnes" name="nombre_personnes" min="10" step="1" placeholder="Ex: 10, 11, 20" required><br><br>
 
             <label for="gain_final">Gain Final Estimé :</label>
-            <input type="text" id="gain_final" name="gain_final" readonly><br><br>
+            <input type="text" id="gain_final" name="gain_final" readonly placeholder="Le gain sera affiché ici"><br><br>
 
             <button type="button" id="calculer_gain">Calculer le Gain</button>
-            <button type="button" id="ajouter_participant" style="display:none;">Ajouter Participant</button>
         </form>
     </section>
 </main>
@@ -108,6 +118,38 @@
     <p>&copy; 2025 COOPERATIVE R2C1. Tous droits réservés.</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const methodePaiementRadios = document.querySelectorAll('input[name="methode_paiement"]');
+        const cardDetailsDiv = document.getElementById('card-details');
+
+        methodePaiementRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'carte') {
+                    cardDetailsDiv.style.display = 'block';
+                    cardDetailsDiv.querySelectorAll('input').forEach(input => input.setAttribute('required', 'true'));
+                } else {
+                    cardDetailsDiv.style.display = 'none';
+                    cardDetailsDiv.querySelectorAll('input').forEach(input => input.removeAttribute('required'));
+                }
+            });
+        });
+
+        document.getElementById('calculer_gain').addEventListener('click', function() {
+            const nombrePersonnes = parseFloat(document.getElementById('nombre_personnes').value);
+
+            if (isNaN(nombrePersonnes) || nombrePersonnes < 10) {
+                alert("Veuillez entrer un nombre de personnes valide (10 ou plus).");
+                return;
+            }
+
+            const baseGainFor10 = 70;
+            const gainPerPerson = 7;
+            let gainEstime = baseGainFor10 + ((nombrePersonnes - 10) * gainPerPerson);
+            document.getElementById('gain_final').value = gainEstime.toFixed(2) + ' $';
+        });
+    });
+</script>
+
 </body>
 </html>
