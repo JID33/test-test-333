@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const methodePaiementRadios = document.querySelectorAll('input[name="methode_paiement"]');
+    const paymentMethodRadios = document.querySelectorAll('input[name="methode_paiement"]');
     const cardDetailsDiv = document.getElementById('card-details');
 
-    methodePaiementRadios.forEach(radio => {
+    paymentMethodRadios.forEach(radio => {
         radio.addEventListener('change', function () {
             if (this.value === 'carte') {
                 cardDetailsDiv.style.display = 'block';
@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('calculer_gain').addEventListener('click', function () {
-        const nombrePersonnes = parseFloat(document.getElementById('nombre_personnes').value);
+        const numberOfPeople = parseFloat(document.getElementById('nombre_personnes').value);
 
-        if (isNaN(nombrePersonnes) || nombrePersonnes < 10) {
-            alert("Veuillez entrer un nombre de personnes valide (10 ou plus).");
+        if (isNaN(numberOfPeople) || numberOfPeople < 10) {
+            alert("Please enter a valid number of people (10 or more).");
             return;
         }
 
         const baseGain = 70;
         const gainPerPerson = 7;
 
-        const gain = baseGain + ((nombrePersonnes - 10) * gainPerPerson);
-        document.getElementById('gain_final').value = gain.toFixed(2) + " $";
+        const totalGain = baseGain + ((numberOfPeople - 10) * gainPerPerson);
+        document.getElementById('gain_final').value = totalGain.toFixed(2) + " $";
     });
 });
