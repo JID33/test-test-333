@@ -12,6 +12,30 @@
     form { margin-top: 15px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
     header img { max-width: 300px; height: auto; display: block; margin: auto; margin-bottom: 10px; }
     .lang-switch { text-align: right; margin: 10px; }
+    /* Button group styles */
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+    .top-buttons .site-btn {
+      background: #0057b8;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .top-buttons .site-btn:hover {
+      background: #003366;
+    }
   </style>
 </head>
 
@@ -20,6 +44,14 @@
 <div class="lang-switch">
   <strong>🇺🇸 English</strong> | <a href="index-fr.html">🇫🇷 Français</a>
 </div>
+
+<!-- New Buttons Row -->
+<div class="top-buttons">
+  <a class="site-btn" href="index.html">Home</a>
+  <a class="site-btn" href="admin.html">Admin</a>
+  <a class="site-btn" href="report.html">Report</a>
+</div>
+<!-- End Buttons Row -->
 
 <header>
   <img src="logo.png" alt="COOPERATIVE R2C1 Logo">
