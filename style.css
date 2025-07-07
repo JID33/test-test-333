@@ -188,6 +188,14 @@ body {
   margin-bottom: 18px;
   object-fit: cover;
 }
+.promo-video {
+  display: block;
+  margin: 18px auto 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 18px rgba(18,53,103,0.13);
+  max-width: 100%;
+  height: auto;
+}
 
 .assistance {
   background: #1d62b4;
