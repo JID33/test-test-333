@@ -49,12 +49,15 @@ body {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 3px 24px rgba(18,53,103,0.10);
-  padding: 36px 32px 24px 32px;
+  padding: 36px 32px 36px 32px; /* Increased bottom padding for length */
   width: 350px;
   margin-right: 48px;
+  margin-left: 80px;    /* <-- Move box more to the right */
+  min-height: 500px;    /* <-- Make the box longer vertically */
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: center; /* Vertically center inner content */
 }
 
 .login-section h2 {
